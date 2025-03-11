@@ -47,19 +47,19 @@ include("minestom")
 include("velocity")
 include("bungee")
 
-// Modded
-include("versions")
-project(":versions").apply {
-    projectDir = file("versions/")
-    buildFileName = "root.gradle.kts"
-}
+// // Modded
+// include("versions")
+// project(":versions").apply {
+//     projectDir = file("versions/")
+//     buildFileName = "root.gradle.kts"
+// }
 
-file("versions").listFilesOrdered {
-    return@listFilesOrdered it.isDirectory && it.name.contains("-")
-}.forEach {
-    include("versions:${it.name}")
-    project(":versions:${it.name}").apply {
-        projectDir = file("versions/${it.name}")
-        buildFileName = "../build.gradle.kts"
-    }
-}
+// file("versions").listFilesOrdered {
+//     return@listFilesOrdered it.isDirectory && it.name.contains("-")
+// }.forEach {
+//     include("versions:${it.name}")
+//     project(":versions:${it.name}").apply {
+//         projectDir = file("versions/${it.name}")
+//         buildFileName = "../build.gradle.kts"
+//     }
+// }
