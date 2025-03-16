@@ -29,7 +29,7 @@ subprojects {
         java {
             withSourcesJar()
 
-            toolchain.languageVersion.set(JavaLanguageVersion.of(21))
+            toolchain.languageVersion.set(JavaLanguageVersion.of(8))
         }
 
         compileJava {
